@@ -1,5 +1,6 @@
 package application;
-import java.util.List;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 
 import model.dao.DaoFactory;
 import model.dao.SellerDao;
@@ -8,14 +9,15 @@ import model.entities.Seller;
 
 public class Program {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws ParseException {
+		
+		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
 		
 		SellerDao sellerDao = DaoFactory.createSellerDao();
+			
+		sellerDao.deleteById(35);
 		
-		List<Seller> seller = sellerDao.findaAll();
-		
-		seller.forEach(System.out::println);	
-		
+		System.out.println("Deleted sucessufully!");
 		
 	}
 }

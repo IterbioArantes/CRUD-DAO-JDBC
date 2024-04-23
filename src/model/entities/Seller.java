@@ -32,6 +32,14 @@ public class Seller implements Serializable{
 		return id;
 	}
 
+	public Department getDepartment() {
+		return department;
+	}
+
+	public void setDepartment(Department department) {
+		this.department = department;
+	}
+
 	public void setId(Integer id) {
 		this.id = id;
 	}
