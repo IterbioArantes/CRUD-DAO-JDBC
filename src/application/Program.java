@@ -1,23 +1,24 @@
 package application;
 import java.text.ParseException;
-import java.text.SimpleDateFormat;
 
 import model.dao.DaoFactory;
+import model.dao.DepartmentDao;
 import model.dao.SellerDao;
 import model.entities.Department;
-import model.entities.Seller;
 
 public class Program {
 
 	public static void main(String[] args) throws ParseException {
 		
-		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
 		
 		SellerDao sellerDao = DaoFactory.createSellerDao();
-			
-		sellerDao.deleteById(35);
+		DepartmentDao departmentDao = DaoFactory.createDepartmenDao();
 		
-		System.out.println("Deleted sucessufully!");
+		
+		Department aa = new Department(7, "outsystemsNew");	
+		Department bb = departmentDao.findById(7);
+		
+		departmentDao.findAll().forEach(System.out::println);
 		
 	}
 }

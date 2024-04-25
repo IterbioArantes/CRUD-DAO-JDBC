@@ -82,7 +82,7 @@ public class SellerDaoJDBC implements SellerDao{
 			
 			int rowAffected = ps.executeUpdate();
 			if(rowAffected == 0) {
-				throw new DbException("User id not fount to update.");
+				throw new DbException("User id not found to update.");
 			}
 			
 			
