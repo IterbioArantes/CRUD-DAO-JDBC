@@ -1,1 +1,1 @@
-Simple operations using Template DAO with JDBC
+Basic Operations using Template DAO with JDBC
