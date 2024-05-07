@@ -1,2 +1,2 @@
 # seller-department
-CRUD Operations using Template DAO with JDBC in a seller-departments context
+CRUD Operations using Template DAO with JDBC in a seller-department context
